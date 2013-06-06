@@ -324,8 +324,6 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
                     }
                 }
                 imgData.path = PDFJS.saveImage(imgData.data, w, h, 'png');
-                imgData.data = [];
-                image.bytes = [];
                 handler.send('obj', [objId, pageIndex, 'Image', imgData]);
               }, handler, xref, resources, image, inline);
         }
